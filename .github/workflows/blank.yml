@@ -53,8 +53,8 @@ runcmd:
   - mv ai-logistics-loadboard-main/* /app
   - docker-compose up -d
   - cp nginx.conf /etc/nginx/sites-available/default
-  - systemctl restart nginx
-  cd ..
+  - systemctl restart nginx cd..
+  
 curl -L https://github.com/YOUR_GITHUB_USERNAME/ai-logistics-loadboard/archive/refs/heads/main.zip -o ai-logistics-loadboard-main.zip
 https://github.com/YOUR_GITHUB_USERNAME/ai-logistics-loadboard
 git clone https://github.com/placeholder/ai-logistics-loadboard.git
