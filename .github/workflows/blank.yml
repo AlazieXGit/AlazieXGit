@@ -54,10 +54,14 @@ runcmd:
   - docker-compose up -d
   - cp nginx.conf /etc/nginx/sites-available/default
   - systemctl restart nginx cd..
-  
-curl -L https://github.com/YOUR_GITHUB_USERNAME/ai-logistics-loadboard/archive/refs/heads/main.zip -o ai-logistics-loadboard-main.zip
-https://github.com/YOUR_GITHUB_USERNAME/ai-logistics-loadboard
-git clone https://github.com/placeholder/ai-logistics-loadboard.git
+  ### 1. Python Application Workflow (`.github/workflows/python-app.yml`)
+- Triggers on push and pull requests to the `main` branch
+- Sets up Python 3.10
+- Installs dependencies from `requirements.txt` (if present)
+- Runs linting with flake8
+- Runs tests with pytest
+- **Note**: Currently, there are no Python files in the repository, so this workflow is prepared for future Python components
+
 cd ai-logistics-loadboard
 git remote rename origin upstream
 git remote add origin https://github.com/YOUR_GITHUB_USERNAME/ai-logistics-loadboard.git
